@@ -1,0 +1,1131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="02b063fd-3b30-4be9-bbad-d45c791b495f" created="2.1.0" activeEnvironment="Default environment" name="InventoryPush_TEST" resourceRoot="" updated="2.5.0 2018-09-14T14:45:07Z" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.2.1" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="825838c4-7be6-4013-bed9-4f3c4e3be1d4" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://s-amadeus-ate-sync.eu.cloudhub.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://123</con:endpoint></con:endpoints><con:resource name="" path="/sync/v2/InventoryStatistics/11/11" id="ef009a25-f3be-43b8-b559-dd1a44e29c5a"><con:settings/><con:parameters/><con:method name="" id="cdc0bb7b-d697-4f54-9aff-aac570fa0a95" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400 404 415</con:status><con:params/><con:element xmlns:myp="http://s-amadeus-ate-sync.eu.cloudhub.io/api/v1/InventoryStatistics/ab1/mypro">myp:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:myp="http://s-amadeus-ate-sync.eu.cloudhub.io/api/v1/InventoryStatistics/AB1/MYPRO">myp:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>400 404</con:status><con:params/><con:element xmlns:myp="http://s-amadeus-ate-sync.eu.cloudhub.io/api/v1/InventoryStatistics/AB1/MYPRO">myp:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html</con:mediaType><con:status>405 404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="ce491e20-e0a6-40d5-a6fc-46ab2a3692e1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Ama-Sequence-ID" value="21"/>
+  <con:entry key="Ama-Correlation-ID" value="testdffghfghamaniiii"/>
+  <con:entry key="Ama-Request-ID" value="TESTAMD66"/>
+  <con:entry key="Ama-Request-Correlation-Id" value="123"/>
+  <con:entry key="Ama-Api-Version" value="1.0"/>
+  <con:entry key="content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://tst-crs-esb-prx.eu.cloudhub.io</con:endpoint><con:request>{
+  "generationTime": "2018-04-27T16:07:07Z",
+  "inventoryStatistics": {
+    "chainCode": "ABC",
+    "propertyCode": "MYP",
+    "action": "Update",
+    "isRms": false,
+    "inventoryPeriods": [
+      {
+        "inventoryDate": "2018-04-27",
+        "totalInventory": {
+          "actualCountCounter": 95,
+          "ginvBookingCounter": 85,
+          "allocatedInventoryTypesCounter":45,
+          "deductedInventoryTypesCounter": 90,
+          "groupBookingCounter": 52,
+          "overbookingCounter": 76,
+          "bookingCounter": 88
+        },
+        "inventoryTypes": [
+          {
+            "code": "2RMS7",
+            "pacCode": "kkd38",
+            "actualCountCounter": 96,
+            "ginvBookingCounter": 35,
+            "allocatedInventoryTypesCounter": 95,
+            "deductedInventoryTypesCounter": 81,
+            "bookingCounter": 71,
+            "groupBookingCounter": 83
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "UK7",
+             "bookingCounter": 20
+          },
+          {
+            "code": "KV12",
+            "bookingCounter": 41,
+             "bookingLimit": 80
+          }
+        ],
+        "groups": [
+          {
+            "code": "dublin67",
+           "allocatedInventoryTypesCounter": 65,
+           "deductedInventoryTypesCounter": 91,
+            "bookingCounter": 90
+          }
+        ]
+      },
+      {
+        "inventoryDate": "2018-04-27",
+        "totalInventory": {
+         "actualCountCounter": 95,
+          "ginvBookingCounter": 85,
+          "allocatedInventoryTypesCounter":45,
+          "deductedInventoryTypesCounter": 90,
+          "groupBookingCounter": 52,
+          "overbookingCounter": 76,
+          "bookingCounter": 88
+        },
+        "inventoryTypes": [
+          {
+           "code": "2RMS7",
+          "pacCode":"kkd38",
+            "actualCountCounter": 96,
+          "authorizedCountCounter": 35,
+           "ginvBookingCounter": 35,
+          "allocatedInventoryTypesCounter": 95,
+         "deductedInventoryTypesCounter": 81,
+        "bookingCounter": 71,
+      "groupBookingCounter": 83
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "UK7",
+           "bookingCounter": 20
+          }
+        ],
+        "groups": [
+          {
+             "code": "dublin67",
+            "allocatedInventoryTypesCounter": 65,
+            "deductedInventoryTypesCounter": 91,
+            "bookingCounter": 90
+          }
+        ]
+      }
+    ]
+  }
+}</con:request><con:originalUri>http://amd-ate-esb-app.eu.cloudhub.io/api/v1/InventoryStatistics/ABC/MYPRO</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="c28269a7-5454-43ae-b58a-2f01c39a294d" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 1" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints/><con:resource name="/azure/api/entity" path="/azure/api/entity" id="5a7d0b68-2569-467f-afc5-ca7fa05c7a0a"><con:settings/><con:parameters/><con:method name="GET" id="9cfc6ff6-02c9-437d-8460-83e8ae51c1f4" method="GET"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html</con:mediaType><con:status>403</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="GET Request" id="712ba37c-bf8b-431d-8dea-13b894abece3" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://test-s-azure-api.eu.cloudhub.io</con:endpoint><con:request/><con:originalUri>http://test-s-azure-api.eu.cloudhub.io/azure/api/entity</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="74383422-d579-4e09-8a58-79718592ede9" name="TestSuite"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="25e05d9c-6ed7-44c7-94cb-557905921be2" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="BothMandatory&amp;Optional" searchProperties="true" timeout="0" maxResults="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="properties" name="Properties" id="115d2dc5-616c-49cb-8687-e04789079690"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Excel_Path</con:name><con:value>D:\Increment-3\Test Suites\InventoryPush.xlsx</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="datasource" name="DataSource" id="59289fc0-fd9d-4c30-8758-a2a26682c302"><con:settings/><con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSource type="Excel"><con:configuration><file>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</file><worksheet>BothMandatory&amp;Optional</worksheet><cell>C7</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration></con:dataSource><con:shared>true</con:shared><con:restartShared>true</con:restartShared><con:property>generationTime</con:property><con:property>chainCode</con:property><con:property>propertyCode</con:property><con:property>action</con:property><con:property>isRms</con:property><con:property>inventoryDate</con:property><con:property>totalInventory.actualCountCounter</con:property><con:property>totalInventory.authorizedCountCounter</con:property><con:property>totalInventory.ginvBookingCounter</con:property><con:property>totalInventory.allocatedInventoryTypesCounter</con:property><con:property>totalInventory.deductedInventoryTypesCounter</con:property><con:property>totalInventory.groupBookingCounter</con:property><con:property>totalInventory.overbookingCounter</con:property><con:property>totalInventory.houseLosCounter</con:property><con:property>totalInventory.bookingCounter</con:property><con:property>inventoryTypes[].code</con:property><con:property>inventoryTypes[].pacCode</con:property><con:property>inventoryTypes[].actualCountCounter</con:property><con:property>inventoryTypes[].ginvBookingCounter</con:property><con:property>inventoryTypes[].allocatedInventoryTypesCounter</con:property><con:property>inventoryTypes[].deductedInventoryTypesCounter</con:property><con:property>inventoryTypes[].bookingCounter</con:property><con:property>inventoryTypes[].groupBookingCounter</con:property><con:property>inventoryTypes[].authorizedCountCounter</con:property><con:property>priceGrids[].code</con:property><con:property>priceGrids[].bookingCounter</con:property><con:property>priceGrids[].code1</con:property><con:property>priceGrids[].bookingCounter1</con:property><con:property>priceGrids[].bookingLimit</con:property><con:property>groups[].code</con:property><con:property>groups[].allocatedInventoryTypesCounter</con:property><con:property>groups[].deductedInventoryTypesCounter</con:property><con:property>groups[].bookingCounter</con:property><con:property>Ama-Request-Id</con:property><con:property>Result</con:property><con:property>Request</con:property><con:property>Response</con:property><con:property>Audit Response</con:property><con:property>Audit entries</con:property><con:property>Response time</con:property><con:property>message_receive_time</con:property><con:completeLastOperation>true</con:completeLastOperation><con:restartOnRun>true</con:restartOnRun></con:config></con:testStep><con:testStep type="restrequest" name="POST_Request" id="b4b4adf9-c81a-44e5-80ba-87accabdd9b9"><con:settings/><con:config service="http://s-amadeus-ate-sync.eu.cloudhub.io" resourcePath="/sync/v2/InventoryStatistics/11/11" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST_Request" id="ce491e20-e0a6-40d5-a6fc-46ab2a3692e1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Ama-Sequence-ID" value="21"/>
+  <con:entry key="Ama-Correlation-ID" value="${DataSource#Ama-Request-Id}"/>
+  <con:entry key="Ama-Request-ID" value=""/>
+  <con:entry key="Ama-Api-Version" value="1.0"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://tst-crs-esb-prx-m4.eu.cloudhub.io</con:endpoint><con:request>{
+  "generationTime": "${DataSource#generationTime}",
+  "inventoryStatistics": {
+    "chainCode": "${DataSource#chainCode}",
+    "propertyCode": "${DataSource#propertyCode}",
+    "action": "${DataSource#action}",
+    "isRms": ${DataSource#isRms},
+    "inventoryPeriods": [
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+          "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+            "code": "${DataSource#inventoryTypes[].code}",
+            "pacCode": "${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+            "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+            "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+            "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+             "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          },
+          {
+            "code": "${DataSource#priceGrids[].code1}",
+            "bookingCounter": ${DataSource#priceGrids[].bookingCounter1},
+             "bookingLimit": ${DataSource#priceGrids[].bookingLimit}
+          }
+        ],
+        "groups": [
+          {
+            "code": "${DataSource#groups[].code}",
+           "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+           "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      },
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+         "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+           "code": "${DataSource#inventoryTypes[].code}",
+          "pacCode":"${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+          "authorizedCountCounter": ${DataSource#inventoryTypes[].authorizedCountCounter},
+           "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+          "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+         "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+        "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+      "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+           "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          }
+        ],
+        "groups": [
+          {
+             "code": "${DataSource#groups[].code}",
+            "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      }
+    ]
+  }
+}</con:request><con:originalUri>http://amd-ate-esb-app.eu.cloudhub.io/api/v1/InventoryStatistics/ABC/MYPRO</con:originalUri><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="8c626506-3dd7-4f61-9c47-7ebb8d05a37d"><con:settings/><con:config><script>def rawResponse = context.expand( '${Azure Request#RawResponse}' )
+def responseAsXml = context.expand( '${Azure Request#ResponseAsXml#//Response[1]/e[2]/properties[1]/log_type[1]}' )
+log.info responseAsXml
+log.info rawResponse;
+def response = context.expand( '${POST_Request#Response}' )
+if(response.contains('Success'))
+{
+return "PASS"
+}
+else
+{
+return "FAIL"
+}
+
+
+//def response = context.expand( '${Suite_DELETE#RawResponse}' )
+//if(response.contains('204'))
+//{
+////response.contains('OB')
+//return "PASS"
+//}
+//else
+//{
+//return "FAIL"
+//}</script></con:config></con:testStep><con:testStep type="delay" name="Delay" id="20dd9653-7743-4fb5-bf6e-06d0cf2786f0"><con:settings/><con:config><delay>2000</delay></con:config></con:testStep><con:testStep type="restrequest" name="Azure Request" id="9a4d7faa-5b7f-4b06-ab7e-acb631cdf5dd"><con:settings/><con:config service="REST Service 1" resourcePath="/azure/api/entity" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Azure Request" id="712ba37c-bf8b-431d-8dea-13b894abece3" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Authorization" value="Basic dGVzdDp0ZXN0MTIz"/>
+  <con:entry key="partitionkey" value="${DataSource#Ama-Request-Id}"/>
+  <con:entry key="Username" value="test"/>
+  <con:entry key="tablename" value="auditAmadeusTST"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Password" value="test123"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://s-azure-api-lt.eu.cloudhub.io</con:endpoint><con:request/><con:originalUri>http://test-s-azure-api.eu.cloudhub.io/azure/api/entity</con:originalUri><con:credentials><con:username>test</con:username><con:password>test123</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="POST_Request1" id="f1a4188c-48ab-402e-8ea1-38b4ad88d7b0" disabled="true"><con:settings/><con:config service="http://s-amadeus-ate-sync.eu.cloudhub.io" resourcePath="/sync/v2/InventoryStatistics/11/11" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST_Request1" id="e8fa67bf-baeb-4e0b-9a4a-e7a1d8d9bf26" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Ama-Sequence-ID" value="123"/>
+  <con:entry key="Ama-Correlation-ID" value="Test123"/>
+  <con:entry key="Ama-Request-ID" value="Test12350"/>
+  <con:entry key="Ama-Api-Version" value="1.0"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://dev-crs-esb-prx.eu.cloudhub.io/</con:endpoint><con:request>{
+  "generationTime": "${DataSource#generationTime}",
+  "inventoryStatistics": {
+    "chainCode": "${DataSource#chainCode}",
+    "propertyCode": "${DataSource#propertyCode}",
+    "action": "${DataSource#action}",
+    "isRms": ${DataSource#isRms},
+    "inventoryPeriods": [
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+          "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+            "code": "${DataSource#inventoryTypes[].code}",
+            "pacCode": "${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+            "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+            "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+            "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+             "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          },
+          {
+            "code": "${DataSource#priceGrids[].code1}",
+            "bookingCounter": ${DataSource#priceGrids[].bookingCounter1},
+             "bookingLimit": ${DataSource#priceGrids[].bookingLimit}
+          }
+        ],
+        "groups": [
+          {
+            "code": "${DataSource#groups[].code}",
+           "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+           "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      },
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+         "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+           "code": "${DataSource#inventoryTypes[].code}",
+          "pacCode":"${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+          "authorizedCountCounter": ${DataSource#inventoryTypes[].authorizedCountCounter},
+           "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+          "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+         "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+        "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+      "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+           "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          }
+        ],
+        "groups": [
+          {
+             "code": "${DataSource#groups[].code}",
+            "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      }
+    ]
+  }
+}</con:request><con:originalUri>http://s-amadeus-ate-sync.eu.cloudhub.io/api/v1/InventoryStatistics/AB1/MYPRO</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="56c61366-b4f2-4fc0-90a6-49feb3cbeabc"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>logtype</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Azure Request</con:sourceStep><con:sourcePath>.properties.log_type</con:sourcePath><con:targetType>logtype</con:targetType><con:targetStep>#Project#</con:targetStep><con:targetPath/><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>message_receive_time</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Azure Request</con:sourceStep><con:sourcePath>.properties.message_receive_time</con:sourcePath><con:targetType>message_receive_time</con:targetType><con:targetStep>#Project#</con:targetStep><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="Responsetime" id="d5b5bdcf-e621-452a-8a33-573f1f8ce989"><con:settings/><con:config><script>return "Time taken:-" + testRunner.testCase.testSteps["POST_Request"].testRequest.response.timeTaken</script></con:config></con:testStep><con:testStep type="datasink" name="DataSink" id="92e4123f-b5e2-44ff-876f-4208443b7c67"><con:settings/><con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSink type="Excel"><con:configuration><file>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</file><outfile>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</outfile><worksheet>BothMandatory&amp;Optional</worksheet><cell>C7</cell><evaluateFormulas>true</evaluateFormulas><append>false</append></con:configuration></con:dataSink><con:properties><con:property><con:name>generationTime</con:name><con:value>${DataSource#generationTime}</con:value></con:property><con:property><con:name>chainCode</con:name><con:value>${DataSource#chainCode}</con:value></con:property><con:property><con:name>propertyCode</con:name><con:value>${DataSource#propertyCode}</con:value></con:property><con:property><con:name>action</con:name><con:value>${DataSource#action}</con:value></con:property><con:property><con:name>isRms</con:name><con:value>${DataSource#isRms}</con:value></con:property><con:property><con:name> inventoryDate</con:name><con:value>${DataSource#inventoryDate}</con:value></con:property><con:property><con:name> totalInventory.actualCountCounter</con:name><con:value>${DataSource#totalInventory.actualCountCounter}</con:value></con:property><con:property><con:name> totalInventory.authorizedCountCounter</con:name><con:value>${DataSource#totalInventory.authorizedCountCounter}</con:value></con:property><con:property><con:name> totalInventory.ginvBookingCounter</con:name><con:value>${DataSource#totalInventory.ginvBookingCounter}</con:value></con:property><con:property><con:name> totalInventory.allocatedInventoryTypesCounter</con:name><con:value>${DataSource#totalInventory.allocatedInventoryTypesCounter}</con:value></con:property><con:property><con:name> totalInventory.deductedInventoryTypesCounter</con:name><con:value>${DataSource#totalInventory.deductedInventoryTypesCounter}</con:value></con:property><con:property><con:name> totalInventory.groupBookingCounter</con:name><con:value>${DataSource#totalInventory.groupBookingCounter}</con:value></con:property><con:property><con:name> totalInventory.overbookingCounter</con:name><con:value>${DataSource#totalInventory.overbookingCounter}</con:value></con:property><con:property><con:name> totalInventory.houseLosCounter</con:name><con:value>${DataSource#totalInventory.houseLosCounter}</con:value></con:property><con:property><con:name> totalInventory.bookingCounter</con:name><con:value>${DataSource#totalInventory.bookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].code</con:name><con:value>${DataSource#inventoryTypes[].code}</con:value></con:property><con:property><con:name> inventoryTypes[].pacCode</con:name><con:value>${DataSource#inventoryTypes[].pacCode}</con:value></con:property><con:property><con:name> inventoryTypes[].actualCountCounter</con:name><con:value>${DataSource#inventoryTypes[].actualCountCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].ginvBookingCounter</con:name><con:value>${DataSource#inventoryTypes[].ginvBookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].allocatedInventoryTypesCounter</con:name><con:value>${DataSource#inventoryTypes[].allocatedInventoryTypesCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].deductedInventoryTypesCounter</con:name><con:value>${DataSource#inventoryTypes[].deductedInventoryTypesCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].bookingCounter</con:name><con:value>${DataSource#inventoryTypes[].bookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].groupBookingCounter</con:name><con:value>${DataSource#inventoryTypes[].groupBookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].authorizedCountCounter</con:name><con:value>${DataSource#inventoryTypes[].authorizedCountCounter}</con:value></con:property><con:property><con:name> priceGrids[].code</con:name><con:value>${DataSource#priceGrids[].code}</con:value></con:property><con:property><con:name> priceGrids[].bookingCounter</con:name><con:value>${DataSource#priceGrids[].bookingCounter}</con:value></con:property><con:property><con:name>priceGrids[].code1</con:name><con:value>${DataSource#priceGrids[].code1}</con:value></con:property><con:property><con:name>priceGrids[].bookingCounter1</con:name><con:value>${DataSource#priceGrids[].bookingCounter1}</con:value></con:property><con:property><con:name> priceGrids[].bookingLimit</con:name><con:value>${DataSource#priceGrids[].bookingLimit}</con:value></con:property><con:property><con:name> groups[].code</con:name><con:value>${DataSource#groups[].code}</con:value></con:property><con:property><con:name> groups[].allocatedInventoryTypesCounter</con:name><con:value>${DataSource#groups[].allocatedInventoryTypesCounter}</con:value></con:property><con:property><con:name> groups[].deductedInventoryTypesCounter</con:name><con:value>${DataSource#groups[].deductedInventoryTypesCounter}</con:value></con:property><con:property><con:name> groups[].bookingCounter</con:name><con:value>${DataSource#groups[].bookingCounter}</con:value></con:property><con:property><con:name>Ama-Request-Id</con:name><con:value>${DataSource#Ama-Request-Id}</con:value></con:property><con:property><con:name>Result</con:name><con:value>${Groovy Script#result}</con:value></con:property><con:property><con:name>Request</con:name><con:value>${POST_Request#Request}</con:value></con:property><con:property><con:name>Response</con:name><con:value>${POST_Request#Response}</con:value></con:property><con:property><con:name>Audit Response</con:name><con:value>${Azure Request#Response}</con:value></con:property><con:property><con:name>Audit entries</con:name><con:value>${#Project#logtype}</con:value></con:property><con:property><con:name>Response time</con:name><con:value>${Responsetime#result}</con:value></con:property><con:property><con:name>message_receive_time</con:name><con:value>${#Project#message_receive_time}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="datasourceloop" name="DataSource Loop" id="af08c183-46eb-452c-a518-ba753ec8ceae"><con:settings/><con:config><dataSourceStep>DataSource</dataSourceStep><targetStep>POST_Request</targetStep></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>f1a4188c-48ab-402e-8ea1-38b4ad88d7b0</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>59289fc0-fd9d-4c30-8758-a2a26682c302</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>8c626506-3dd7-4f61-9c47-7ebb8d05a37d</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>92e4123f-b5e2-44ff-876f-4208443b7c67</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>af08c183-46eb-452c-a518-ba753ec8ceae</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>115d2dc5-616c-49cb-8687-e04789079690</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>20dd9653-7743-4fb5-bf6e-06d0cf2786f0</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>9a4d7faa-5b7f-4b06-ab7e-acb631cdf5dd</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>56c61366-b4f2-4fc0-90a6-49feb3cbeabc</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>d5b5bdcf-e621-452a-8a33-573f1f8ce989</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="463d62f4-acef-4803-872b-10af9cd187ee" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="MissingOptional" searchProperties="true" timeout="0" maxResults="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="properties" name="Properties" id="99dc81cd-b681-4d68-97d1-08f3296506f6"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Excel_Path</con:name><con:value>D:/Amadeus/Test Suits/InventoryPush.xlsx</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="datasource" name="DataSource" id="55bf172b-63b6-44d3-b5c0-ffdaf451fe3e"><con:settings/><con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSource type="Excel"><con:configuration><file>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</file><worksheet>MissingOptional</worksheet><cell>C7</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration></con:dataSource><con:shared>true</con:shared><con:restartShared>true</con:restartShared><con:property>generationTime</con:property><con:property>chainCode</con:property><con:property>propertyCode</con:property><con:property>action</con:property><con:property>isRms</con:property><con:property>inventoryDate</con:property><con:property>totalInventory.actualCountCounter</con:property><con:property>totalInventory.authorizedCountCounter</con:property><con:property>totalInventory.ginvBookingCounter</con:property><con:property>totalInventory.allocatedInventoryTypesCounter</con:property><con:property>totalInventory.deductedInventoryTypesCounter</con:property><con:property>totalInventory.groupBookingCounter</con:property><con:property>totalInventory.overbookingCounter</con:property><con:property>totalInventory.houseLosCounter</con:property><con:property>totalInventory.bookingCounter</con:property><con:property>inventoryTypes[].code</con:property><con:property>inventoryTypes[].pacCode</con:property><con:property>inventoryTypes[].actualCountCounter</con:property><con:property>inventoryTypes[].ginvBookingCounter</con:property><con:property>inventoryTypes[].allocatedInventoryTypesCounter</con:property><con:property>inventoryTypes[].deductedInventoryTypesCounter</con:property><con:property>inventoryTypes[].bookingCounter</con:property><con:property>inventoryTypes[].groupBookingCounter</con:property><con:property>inventoryTypes[].authorizedCountCounter</con:property><con:property>priceGrids[].code</con:property><con:property>priceGrids[].bookingCounter</con:property><con:property>priceGrids[].code1</con:property><con:property>priceGrids[].bookingCounter1</con:property><con:property>priceGrids[].bookingLimit</con:property><con:property>groups[].code</con:property><con:property>groups[].allocatedInventoryTypesCounter</con:property><con:property>groups[].deductedInventoryTypesCounter</con:property><con:property>groups[].bookingCounter</con:property><con:property>Ama-Request-Id</con:property><con:property>Result</con:property><con:property>Request</con:property><con:property>Response</con:property><con:property>Audit Response</con:property><con:property>Audit entries</con:property><con:property>Response time</con:property><con:property>message_receive_time</con:property><con:completeLastOperation>true</con:completeLastOperation><con:restartOnRun>true</con:restartOnRun></con:config></con:testStep><con:testStep type="restrequest" name="POST_Request" id="e0ab97aa-45fb-429b-a6ac-71fedf9af427"><con:settings/><con:config service="http://s-amadeus-ate-sync.eu.cloudhub.io" resourcePath="/sync/v2/InventoryStatistics/11/11" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST_Request" id="ce491e20-e0a6-40d5-a6fc-46ab2a3692e1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Ama-Sequence-ID" value="21"/>
+  <con:entry key="Ama-Correlation-ID" value="${DataSource#Ama-Request-Id}"/>
+  <con:entry key="Ama-Request-ID" value="Test1"/>
+  <con:entry key="Ama-Api-Version" value="1.0"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://tst-crs-esb-prx-m4.eu.cloudhub.io</con:endpoint><con:request>{
+"generationTime": "${DataSource#generationTime}",
+  "inventoryStatistics": {
+    "chainCode": "${DataSource#chainCode}",
+    "propertyCode": "${DataSource#propertyCode}",
+    "action": "${DataSource#action}",
+    "isRms": ${DataSource#isRms},
+    "inventoryPeriods": [
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+          "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+            "code": "${DataSource#inventoryTypes[].code}",
+            "pacCode": "${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+            "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+            "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+            "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+             "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          },
+          {
+            "code": "${DataSource#priceGrids[].code1}",
+            "bookingCounter": ${DataSource#priceGrids[].bookingCounter1},
+             "bookingLimit": ${DataSource#priceGrids[].bookingLimit}
+          }
+        ],
+        "groups": [
+          {
+            "code": "${DataSource#groups[].code}",
+           "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+           "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      },
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+         "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+           "code": "${DataSource#inventoryTypes[].code}",
+          "pacCode":"${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+          "authorizedCountCounter": ${DataSource#inventoryTypes[].authorizedCountCounter},
+           "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+          "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+         "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+        "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+      "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+           "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          }
+        ],
+        "groups": [
+          {
+             "code": "${DataSource#groups[].code}",
+            "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      }
+    ]
+  }
+}</con:request><con:originalUri>http://amd-ate-esb-app.eu.cloudhub.io/api/v1/InventoryStatistics/ABC/MYPRO</con:originalUri><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="POST_Request1" id="3b2198fe-4f94-48a7-8f80-e264c97ade43" disabled="true"><con:settings/><con:config service="http://s-amadeus-ate-sync.eu.cloudhub.io" resourcePath="/sync/v2/InventoryStatistics/11/11" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST_Request1" id="e8fa67bf-baeb-4e0b-9a4a-e7a1d8d9bf26" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Ama-Sequence-ID" value="123"/>
+  <con:entry key="Ama-Correlation-ID" value="Test123"/>
+  <con:entry key="Ama-Request-ID" value="Test12350"/>
+  <con:entry key="Ama-Api-Version" value="1.0"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://dev-crs-esb-prx.eu.cloudhub.io/</con:endpoint><con:request>{
+"generationTime": "${DataSource#generationTime}",
+  "inventoryStatistics": {
+    "chainCode": "${DataSource#chainCode}",
+    "propertyCode": "${DataSource#propertyCode}",
+    "action": "${DataSource#action}",
+    "isRms": ${DataSource#isRms},
+    "inventoryPeriods": [
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+          "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+            "code": "${DataSource#inventoryTypes[].code}",
+            "pacCode": "${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+            "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+            "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+            "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+             "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          },
+          {
+            "code": "${DataSource#priceGrids[].code1}",
+            "bookingCounter": ${DataSource#priceGrids[].bookingCounter1},
+             "bookingLimit": ${DataSource#priceGrids[].bookingLimit}
+          }
+        ],
+        "groups": [
+          {
+            "code": "${DataSource#groups[].code}",
+           "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+           "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      },
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+         "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+           "code": "${DataSource#inventoryTypes[].code}",
+          "pacCode":"${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+          "authorizedCountCounter": ${DataSource#inventoryTypes[].authorizedCountCounter},
+           "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+          "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+         "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+        "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+      "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+           "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          }
+        ],
+        "groups": [
+          {
+             "code": "${DataSource#groups[].code}",
+            "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      }
+    ]
+  }
+}</con:request><con:originalUri>http://s-amadeus-ate-sync.eu.cloudhub.io/api/v1/InventoryStatistics/AB1/MYPRO</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="a2931f0d-9ea0-4bc2-ab73-e6e614a708fc"><con:settings/><con:config><script>def response = context.expand( '${POST_Request#Response}' )
+if(response.contains('Success'))
+{
+return "PASS"
+}
+else
+{
+return "FAIL"
+}
+
+
+//def response = context.expand( '${Suite_DELETE#RawResponse}' )
+//if(response.contains('204'))
+//{
+////response.contains('OB')
+//return "PASS"
+//}
+//else
+//{
+//return "FAIL"
+//}</script></con:config></con:testStep><con:testStep type="delay" name="Delay" id="ab98b861-f9db-4bd9-b07b-41ac1579f410"><con:settings/><con:config><delay>2000</delay></con:config></con:testStep><con:testStep type="restrequest" name="Azure Request" id="85e9c48a-f6de-4ce8-950a-ea3ac56e1eaf"><con:settings/><con:config service="REST Service 1" resourcePath="/azure/api/entity" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Azure Request" id="712ba37c-bf8b-431d-8dea-13b894abece3" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Authorization" value="Basic dGVzdDp0ZXN0MTIz"/>
+  <con:entry key="partitionkey" value="${DataSource#Ama-Request-Id}"/>
+  <con:entry key="Username" value="test"/>
+  <con:entry key="tablename" value="auditAmadeusTST"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Password" value="test123"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://s-azure-api-lt.eu.cloudhub.io</con:endpoint><con:request/><con:originalUri>http://test-s-azure-api.eu.cloudhub.io/azure/api/entity</con:originalUri><con:credentials><con:username>test</con:username><con:password>test123</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Responsetime" id="4e6b6528-99cf-4d6b-81e0-7b1bb7ab389d"><con:settings/><con:config><script>return "Time taken:-" + testRunner.testCase.testSteps["POST_Request"].testRequest.response.timeTaken</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="0a098704-7103-481b-894c-f17faf950e7d"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>logtype</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Azure Request</con:sourceStep><con:sourcePath>.properties.log_type</con:sourcePath><con:targetType>logtype</con:targetType><con:targetStep>#Project#</con:targetStep><con:targetPath/><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>message_receive_time</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Azure Request</con:sourceStep><con:sourcePath>.properties.message_receive_time</con:sourcePath><con:targetType>message_receive_time</con:targetType><con:targetStep>#Project#</con:targetStep><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="datasink" name="DataSink" id="a5750b25-ce1b-4dfc-af80-077863cee23f"><con:settings/><con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSink type="Excel"><con:configuration><file>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</file><outfile>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</outfile><worksheet>MissingOptional</worksheet><cell>C7</cell><evaluateFormulas>true</evaluateFormulas><append>false</append></con:configuration></con:dataSink><con:properties><con:property><con:name>generationTime</con:name><con:value>${DataSource#generationTime}</con:value></con:property><con:property><con:name>chainCode</con:name><con:value>${DataSource#chainCode}</con:value></con:property><con:property><con:name>propertyCode</con:name><con:value>${DataSource#propertyCode}</con:value></con:property><con:property><con:name>action</con:name><con:value>${DataSource#action}</con:value></con:property><con:property><con:name>isRms</con:name><con:value>${DataSource#isRms}</con:value></con:property><con:property><con:name> inventoryDate</con:name><con:value>${DataSource#inventoryDate}</con:value></con:property><con:property><con:name> totalInventory.actualCountCounter</con:name><con:value>${DataSource#totalInventory.actualCountCounter}</con:value></con:property><con:property><con:name> totalInventory.authorizedCountCounter</con:name><con:value>${DataSource#totalInventory.authorizedCountCounter}</con:value></con:property><con:property><con:name> totalInventory.ginvBookingCounter</con:name><con:value>${DataSource#totalInventory.ginvBookingCounter}</con:value></con:property><con:property><con:name> totalInventory.allocatedInventoryTypesCounter</con:name><con:value>${DataSource#totalInventory.allocatedInventoryTypesCounter}</con:value></con:property><con:property><con:name> totalInventory.deductedInventoryTypesCounter</con:name><con:value>${DataSource#totalInventory.deductedInventoryTypesCounter}</con:value></con:property><con:property><con:name> totalInventory.groupBookingCounter</con:name><con:value>${DataSource#totalInventory.groupBookingCounter}</con:value></con:property><con:property><con:name> totalInventory.overbookingCounter</con:name><con:value>${DataSource#totalInventory.overbookingCounter}</con:value></con:property><con:property><con:name> totalInventory.houseLosCounter</con:name><con:value>${DataSource#totalInventory.houseLosCounter}</con:value></con:property><con:property><con:name> totalInventory.bookingCounter</con:name><con:value>${DataSource#totalInventory.bookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].code</con:name><con:value>${DataSource#inventoryTypes[].code}</con:value></con:property><con:property><con:name> inventoryTypes[].pacCode</con:name><con:value>${DataSource#inventoryTypes[].pacCode}</con:value></con:property><con:property><con:name> inventoryTypes[].actualCountCounter</con:name><con:value>${DataSource#inventoryTypes[].actualCountCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].ginvBookingCounter</con:name><con:value>${DataSource#inventoryTypes[].ginvBookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].allocatedInventoryTypesCounter</con:name><con:value>${DataSource#inventoryTypes[].allocatedInventoryTypesCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].deductedInventoryTypesCounter</con:name><con:value>${DataSource#inventoryTypes[].deductedInventoryTypesCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].bookingCounter</con:name><con:value>${DataSource#inventoryTypes[].bookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].groupBookingCounter</con:name><con:value>${DataSource#inventoryTypes[].groupBookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].authorizedCountCounter</con:name><con:value>${DataSource#inventoryTypes[].authorizedCountCounter}</con:value></con:property><con:property><con:name> priceGrids[].code</con:name><con:value>${DataSource#priceGrids[].code}</con:value></con:property><con:property><con:name> priceGrids[].bookingCounter</con:name><con:value>${DataSource#priceGrids[].bookingCounter}</con:value></con:property><con:property><con:name>priceGrids[].code1</con:name><con:value>${DataSource#priceGrids[].code1}</con:value></con:property><con:property><con:name>priceGrids[].bookingCounter1</con:name><con:value>${DataSource#priceGrids[].bookingCounter1}</con:value></con:property><con:property><con:name> priceGrids[].bookingLimit</con:name><con:value>${DataSource#priceGrids[].bookingLimit}</con:value></con:property><con:property><con:name> groups[].code</con:name><con:value>${DataSource#groups[].code}</con:value></con:property><con:property><con:name> groups[].allocatedInventoryTypesCounter</con:name><con:value>${DataSource#groups[].allocatedInventoryTypesCounter}</con:value></con:property><con:property><con:name> groups[].deductedInventoryTypesCounter</con:name><con:value>${DataSource#groups[].deductedInventoryTypesCounter}</con:value></con:property><con:property><con:name> groups[].bookingCounter</con:name><con:value>${DataSource#groups[].bookingCounter}</con:value></con:property><con:property><con:name>Ama-Request-Id</con:name><con:value>${DataSource#Ama-Request-Id}</con:value></con:property><con:property><con:name>Result</con:name><con:value>${Groovy Script#result}</con:value></con:property><con:property><con:name>Request</con:name><con:value>${POST_Request#Request}</con:value></con:property><con:property><con:name>Response</con:name><con:value>${POST_Request#Response}</con:value></con:property><con:property><con:name>Audit Response</con:name><con:value>${Azure Request#Response}</con:value></con:property><con:property><con:name>Audit entries</con:name><con:value>${#Project#logtype}</con:value></con:property><con:property><con:name>Response time</con:name><con:value>${Responsetime#result}</con:value></con:property><con:property><con:name>message_receive_time</con:name><con:value>${#Project#message_receive_time}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="datasourceloop" name="DataSource Loop" id="7b3e0958-7dd3-4f8a-a400-9fede22d909c"><con:settings/><con:config><dataSourceStep>DataSource</dataSourceStep><targetStep>POST_Request</targetStep></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>f1a4188c-48ab-402e-8ea1-38b4ad88d7b0</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>59289fc0-fd9d-4c30-8758-a2a26682c302</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>8c626506-3dd7-4f61-9c47-7ebb8d05a37d</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>92e4123f-b5e2-44ff-876f-4208443b7c67</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>af08c183-46eb-452c-a518-ba753ec8ceae</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>115d2dc5-616c-49cb-8687-e04789079690</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>85e9c48a-f6de-4ce8-950a-ea3ac56e1eaf</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>4e6b6528-99cf-4d6b-81e0-7b1bb7ab389d</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>0a098704-7103-481b-894c-f17faf950e7d</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="2e71f348-6331-4591-ac89-ff4b3b4f41a1" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="MissingMandatory" searchProperties="true" timeout="0" maxResults="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="properties" name="Properties" id="7ef59d74-8f65-403c-90bf-e0c49ba44029"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Excel_Path</con:name><con:value>D:/Amadeus/Test Suits/InventoryPush.xlsx</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="datasource" name="DataSource" id="bb15f2e8-3e67-43a7-ae44-af23d08eb903"><con:settings/><con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSource type="Excel"><con:configuration><file>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</file><worksheet>MissingMandatory</worksheet><cell>C7</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration></con:dataSource><con:shared>true</con:shared><con:restartShared>true</con:restartShared><con:property>generationTime</con:property><con:property>chainCode</con:property><con:property>propertyCode</con:property><con:property>action</con:property><con:property>isRms</con:property><con:property>inventoryDate</con:property><con:property>totalInventory.actualCountCounter</con:property><con:property>totalInventory.authorizedCountCounter</con:property><con:property>totalInventory.ginvBookingCounter</con:property><con:property>totalInventory.allocatedInventoryTypesCounter</con:property><con:property>totalInventory.deductedInventoryTypesCounter</con:property><con:property>totalInventory.groupBookingCounter</con:property><con:property>totalInventory.overbookingCounter</con:property><con:property>totalInventory.houseLosCounter</con:property><con:property>totalInventory.bookingCounter</con:property><con:property>inventoryTypes[].code</con:property><con:property>inventoryTypes[].pacCode</con:property><con:property>inventoryTypes[].actualCountCounter</con:property><con:property>inventoryTypes[].ginvBookingCounter</con:property><con:property>inventoryTypes[].allocatedInventoryTypesCounter</con:property><con:property>inventoryTypes[].deductedInventoryTypesCounter</con:property><con:property>inventoryTypes[].bookingCounter</con:property><con:property>inventoryTypes[].groupBookingCounter</con:property><con:property>inventoryTypes[].authorizedCountCounter</con:property><con:property>priceGrids[].code</con:property><con:property>priceGrids[].bookingCounter</con:property><con:property>priceGrids[].code1</con:property><con:property>priceGrids[].bookingCounter1</con:property><con:property>priceGrids[].bookingLimit</con:property><con:property>groups[].code</con:property><con:property>groups[].allocatedInventoryTypesCounter</con:property><con:property>groups[].deductedInventoryTypesCounter</con:property><con:property>groups[].bookingCounter</con:property><con:property>Ama-Request-Id</con:property><con:property>Result</con:property><con:property>Request</con:property><con:property>Response</con:property><con:property>Audit Response</con:property><con:property>Audit entries</con:property><con:property>Response time</con:property><con:property>message_receive_time</con:property><con:completeLastOperation>true</con:completeLastOperation><con:restartOnRun>true</con:restartOnRun></con:config></con:testStep><con:testStep type="restrequest" name="POST_Request" id="1e8a6e4e-2b1f-4ffa-9fcd-cb635ff287a5"><con:settings/><con:config service="http://s-amadeus-ate-sync.eu.cloudhub.io" resourcePath="/sync/v2/InventoryStatistics/11/11" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST_Request" id="ce491e20-e0a6-40d5-a6fc-46ab2a3692e1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Ama-Sequence-ID" value="21"/>
+  <con:entry key="Ama-Correlation-ID" value="${DataSource#Ama-Request-Id}"/>
+  <con:entry key="Ama-Request-ID" value="Test1"/>
+  <con:entry key="Ama-Api-Version" value="1.0"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://tst-crs-esb-prx-m4.eu.cloudhub.io</con:endpoint><con:request>{
+	"generationTime": "${DataSource#generationTime}",
+  "inventoryStatistics": {
+    "chainCode": "${DataSource#chainCode}",
+    "propertyCode": "${DataSource#propertyCode}",
+    "action": "${DataSource#action}",
+    "isRms": ${DataSource#isRms},
+    "inventoryPeriods": [
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+          "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+            "code": "${DataSource#inventoryTypes[].code}",
+            "pacCode": "${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+            "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+            "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+            "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+             "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          },
+          {
+            "code": "${DataSource#priceGrids[].code1}",
+            "bookingCounter": ${DataSource#priceGrids[].bookingCounter1},
+             "bookingLimit": ${DataSource#priceGrids[].bookingLimit}
+          }
+        ],
+        "groups": [
+          {
+            "code": "${DataSource#groups[].code}",
+           "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+           "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      },
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+         "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+           "code": "${DataSource#inventoryTypes[].code}",
+          "pacCode":"${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+          "authorizedCountCounter": ${DataSource#inventoryTypes[].authorizedCountCounter},
+           "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+          "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+         "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+        "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+      "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+           "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          }
+        ],
+        "groups": [
+          {
+             "code": "${DataSource#groups[].code}",
+            "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      }
+    ]
+  }
+}"generationTime": "${DataSource#generationTime}",</con:request><con:originalUri>http://amd-ate-esb-app.eu.cloudhub.io/api/v1/InventoryStatistics/ABC/MYPRO</con:originalUri><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="POST_Request2" id="f672443a-2299-4ed2-8d19-5e6c3f57efb8" disabled="true"><con:settings/><con:config service="http://s-amadeus-ate-sync.eu.cloudhub.io" resourcePath="/sync/v2/InventoryStatistics/11/11" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST_Request2" id="e8fa67bf-baeb-4e0b-9a4a-e7a1d8d9bf26" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Ama-Sequence-ID" value="123"/>
+  <con:entry key="Ama-Correlation-ID" value="Test123"/>
+  <con:entry key="Ama-Request-ID" value="Test12350"/>
+  <con:entry key="Ama-Api-Version" value="1.0"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://dev-crs-esb-prx.eu.cloudhub.io/</con:endpoint><con:request>{
+	"generationTime": "${DataSource#generationTime}",
+  "inventoryStatistics": {
+    "chainCode": "${DataSource#chainCode}",
+    "propertyCode": "${DataSource#propertyCode}",
+    "action": "${DataSource#action}",
+    "isRms": ${DataSource#isRms},
+    "inventoryPeriods": [
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+          "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+            "code": "${DataSource#inventoryTypes[].code}",
+            "pacCode": "${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+            "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+            "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+            "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+             "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          },
+          {
+            "code": "${DataSource#priceGrids[].code1}",
+            "bookingCounter": ${DataSource#priceGrids[].bookingCounter1},
+             "bookingLimit": ${DataSource#priceGrids[].bookingLimit}
+          }
+        ],
+        "groups": [
+          {
+            "code": "${DataSource#groups[].code}",
+           "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+           "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      },
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+         "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+           "code": "${DataSource#inventoryTypes[].code}",
+          "pacCode":"${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+          "authorizedCountCounter": ${DataSource#inventoryTypes[].authorizedCountCounter},
+           "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+          "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+         "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+        "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+      "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+           "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          }
+        ],
+        "groups": [
+          {
+             "code": "${DataSource#groups[].code}",
+            "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      }
+    ]
+  }
+}"generationTime": "${DataSource#generationTime}",</con:request><con:originalUri>http://s-amadeus-ate-sync.eu.cloudhub.io/api/v1/InventoryStatistics/AB1/MYPRO</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="e7b1a410-7034-4d88-aef0-b4ef63e00a23"><con:settings/><con:config><script>def response = context.expand( '${POST_Request#Response}' )
+if(response.contains('error'))
+{
+return "PASS"
+}
+else
+{
+return "FAIL"
+}
+
+
+//def response = context.expand( '${Suite_DELETE#RawResponse}' )
+//if(response.contains('204'))
+//{
+////response.contains('OB')
+//return "PASS"
+//}
+//else
+//{
+//return "FAIL"
+//}</script></con:config></con:testStep><con:testStep type="delay" name="Delay" id="6f8f255a-739a-43fe-805e-95a6a3d34eac"><con:settings/><con:config><delay>2000</delay></con:config></con:testStep><con:testStep type="restrequest" name="Azure Request" id="031aeb12-3482-4b74-909f-e2a022d34a0f"><con:settings/><con:config service="REST Service 1" resourcePath="/azure/api/entity" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Azure Request" id="712ba37c-bf8b-431d-8dea-13b894abece3" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Authorization" value="Basic dGVzdDp0ZXN0MTIz"/>
+  <con:entry key="partitionkey" value="${DataSource#Ama-Request-Id}"/>
+  <con:entry key="Username" value="test"/>
+  <con:entry key="tablename" value="auditAmadeusTST"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Password" value="test123"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://s-azure-api-lt.eu.cloudhub.io</con:endpoint><con:request/><con:originalUri>http://test-s-azure-api.eu.cloudhub.io/azure/api/entity</con:originalUri><con:credentials><con:username>test</con:username><con:password>test123</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Responsetime" id="34b140c8-97e8-48ae-92be-bed23cdd2637"><con:settings/><con:config><script>return "Time taken:-" + testRunner.testCase.testSteps["POST_Request"].testRequest.response.timeTaken</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="42fcfcb2-e32c-406c-8557-237b2618d57b"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>logtype</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Azure Request</con:sourceStep><con:sourcePath>.properties.log_type</con:sourcePath><con:targetType>logtype</con:targetType><con:targetStep>#Project#</con:targetStep><con:targetPath/><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>message_receive_time</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Azure Request</con:sourceStep><con:sourcePath>.properties.message_receive_time</con:sourcePath><con:targetType>message_receive_time</con:targetType><con:targetStep>#Project#</con:targetStep><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="datasink" name="DataSink" id="a07cc56e-5472-4a88-bc9a-8d15783abf65"><con:settings/><con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSink type="Excel"><con:configuration><file>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</file><outfile>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</outfile><worksheet>MissingMandatory</worksheet><cell>C7</cell><evaluateFormulas>false</evaluateFormulas><append>false</append></con:configuration></con:dataSink><con:properties><con:property><con:name>generationTime</con:name><con:value>${DataSource#generationTime}</con:value></con:property><con:property><con:name>chainCode</con:name><con:value>${DataSource#chainCode}</con:value></con:property><con:property><con:name>propertyCode</con:name><con:value>${DataSource#propertyCode}</con:value></con:property><con:property><con:name>action</con:name><con:value>${DataSource#action}</con:value></con:property><con:property><con:name>isRms</con:name><con:value>${DataSource#isRms}</con:value></con:property><con:property><con:name> inventoryDate</con:name><con:value>${DataSource#inventoryDate}</con:value></con:property><con:property><con:name> totalInventory.actualCountCounter</con:name><con:value>${DataSource#totalInventory.actualCountCounter}</con:value></con:property><con:property><con:name> totalInventory.authorizedCountCounter</con:name><con:value>${DataSource#totalInventory.authorizedCountCounter}</con:value></con:property><con:property><con:name> totalInventory.ginvBookingCounter</con:name><con:value>${DataSource#totalInventory.ginvBookingCounter}</con:value></con:property><con:property><con:name> totalInventory.allocatedInventoryTypesCounter</con:name><con:value>${DataSource#totalInventory.allocatedInventoryTypesCounter}</con:value></con:property><con:property><con:name> totalInventory.deductedInventoryTypesCounter</con:name><con:value>${DataSource#totalInventory.deductedInventoryTypesCounter}</con:value></con:property><con:property><con:name> totalInventory.groupBookingCounter</con:name><con:value>${DataSource#totalInventory.groupBookingCounter}</con:value></con:property><con:property><con:name> totalInventory.overbookingCounter</con:name><con:value>${DataSource#totalInventory.overbookingCounter}</con:value></con:property><con:property><con:name> totalInventory.houseLosCounter</con:name><con:value>${DataSource#totalInventory.houseLosCounter}</con:value></con:property><con:property><con:name> totalInventory.bookingCounter</con:name><con:value>${DataSource#totalInventory.bookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].code</con:name><con:value>${DataSource#inventoryTypes[].code}</con:value></con:property><con:property><con:name> inventoryTypes[].pacCode</con:name><con:value>${DataSource#inventoryTypes[].pacCode}</con:value></con:property><con:property><con:name> inventoryTypes[].actualCountCounter</con:name><con:value>${DataSource#inventoryTypes[].actualCountCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].ginvBookingCounter</con:name><con:value>${DataSource#inventoryTypes[].ginvBookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].allocatedInventoryTypesCounter</con:name><con:value>${DataSource#inventoryTypes[].allocatedInventoryTypesCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].deductedInventoryTypesCounter</con:name><con:value>${DataSource#inventoryTypes[].deductedInventoryTypesCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].bookingCounter</con:name><con:value>${DataSource#inventoryTypes[].bookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].groupBookingCounter</con:name><con:value>${DataSource#inventoryTypes[].groupBookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].authorizedCountCounter</con:name><con:value>${DataSource#inventoryTypes[].authorizedCountCounter}</con:value></con:property><con:property><con:name> priceGrids[].code</con:name><con:value>${DataSource#priceGrids[].code}</con:value></con:property><con:property><con:name> priceGrids[].bookingCounter</con:name><con:value>${DataSource#priceGrids[].bookingCounter}</con:value></con:property><con:property><con:name>priceGrids[].code1</con:name><con:value>${DataSource#priceGrids[].code1}</con:value></con:property><con:property><con:name>priceGrids[].bookingCounter1</con:name><con:value>${DataSource#priceGrids[].bookingCounter1}</con:value></con:property><con:property><con:name> priceGrids[].bookingLimit</con:name><con:value>${DataSource#priceGrids[].bookingLimit}</con:value></con:property><con:property><con:name> groups[].code</con:name><con:value>${DataSource#groups[].code}</con:value></con:property><con:property><con:name> groups[].allocatedInventoryTypesCounter</con:name><con:value>${DataSource#groups[].allocatedInventoryTypesCounter}</con:value></con:property><con:property><con:name> groups[].deductedInventoryTypesCounter</con:name><con:value>${DataSource#groups[].deductedInventoryTypesCounter}</con:value></con:property><con:property><con:name> groups[].bookingCounter</con:name><con:value>${DataSource#groups[].bookingCounter}</con:value></con:property><con:property><con:name>Ama-Request-Id</con:name><con:value>${DataSource#Ama-Request-Id}</con:value></con:property><con:property><con:name>Result</con:name><con:value>${Groovy Script#result}</con:value></con:property><con:property><con:name>Request</con:name><con:value>${POST_Request#Request}</con:value></con:property><con:property><con:name>Response</con:name><con:value>${POST_Request#Response}</con:value></con:property><con:property><con:name>Audit Response</con:name><con:value>${Azure Request#Response}</con:value></con:property><con:property><con:name>Audit entries</con:name><con:value>${#Project#logtype}</con:value></con:property><con:property><con:name>Response time</con:name><con:value>${Responsetime#result}</con:value></con:property><con:property><con:name>message_receive_time</con:name><con:value>${#Project#message_receive_time}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="datasourceloop" name="DataSource Loop" id="e7f5c81d-dc64-4f98-9c42-d4eb0c349299"><con:settings/><con:config><dataSourceStep>DataSource</dataSourceStep><targetStep>POST_Request</targetStep></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>f1a4188c-48ab-402e-8ea1-38b4ad88d7b0</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>59289fc0-fd9d-4c30-8758-a2a26682c302</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>8c626506-3dd7-4f61-9c47-7ebb8d05a37d</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>92e4123f-b5e2-44ff-876f-4208443b7c67</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>af08c183-46eb-452c-a518-ba753ec8ceae</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>115d2dc5-616c-49cb-8687-e04789079690</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>031aeb12-3482-4b74-909f-e2a022d34a0f</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>34b140c8-97e8-48ae-92be-bed23cdd2637</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>42fcfcb2-e32c-406c-8557-237b2618d57b</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="e0b2aabd-f9dc-4401-8726-31f2893b7e28" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="InvalidData" searchProperties="true" timeout="0" maxResults="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="properties" name="Properties" id="29c2adc7-7790-42bf-9cff-c1242ffdddba"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Excel_Path</con:name><con:value>D:/Amadeus/Test Suits/InventoryPush.xlsx</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="datasource" name="DataSource" id="cbfb1d29-a33e-4dae-80ae-2cb000f66b50"><con:settings/><con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSource type="Excel"><con:configuration><file>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</file><worksheet>InvalidData</worksheet><cell>C7</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration></con:dataSource><con:shared>true</con:shared><con:restartShared>true</con:restartShared><con:property>generationTime</con:property><con:property>chainCode</con:property><con:property>propertyCode</con:property><con:property>action</con:property><con:property>isRms</con:property><con:property>inventoryDate</con:property><con:property>totalInventory.actualCountCounter</con:property><con:property>totalInventory.authorizedCountCounter</con:property><con:property>totalInventory.ginvBookingCounter</con:property><con:property>totalInventory.allocatedInventoryTypesCounter</con:property><con:property>totalInventory.deductedInventoryTypesCounter</con:property><con:property>totalInventory.groupBookingCounter</con:property><con:property>totalInventory.overbookingCounter</con:property><con:property>totalInventory.houseLosCounter</con:property><con:property>totalInventory.bookingCounter</con:property><con:property>inventoryTypes[].code</con:property><con:property>inventoryTypes[].pacCode</con:property><con:property>inventoryTypes[].actualCountCounter</con:property><con:property>inventoryTypes[].ginvBookingCounter</con:property><con:property>inventoryTypes[].allocatedInventoryTypesCounter</con:property><con:property>inventoryTypes[].deductedInventoryTypesCounter</con:property><con:property>inventoryTypes[].bookingCounter</con:property><con:property>inventoryTypes[].groupBookingCounter</con:property><con:property>inventoryTypes[].authorizedCountCounter</con:property><con:property>priceGrids[].code</con:property><con:property>priceGrids[].bookingCounter</con:property><con:property>priceGrids[].code1</con:property><con:property>priceGrids[].bookingCounter1</con:property><con:property>priceGrids[].bookingLimit</con:property><con:property>groups[].code</con:property><con:property>groups[].allocatedInventoryTypesCounter</con:property><con:property>groups[].deductedInventoryTypesCounter</con:property><con:property>groups[].bookingCounter</con:property><con:property>Ama-Request-Id</con:property><con:property>Result</con:property><con:property>Request</con:property><con:property>Response</con:property><con:property>Audit Response</con:property><con:property>Audit entries</con:property><con:property>Response time</con:property><con:property>message_receive_time</con:property><con:completeLastOperation>true</con:completeLastOperation><con:restartOnRun>true</con:restartOnRun></con:config></con:testStep><con:testStep type="restrequest" name="POST_Request" id="d79d75ab-742a-4a74-8bf9-791d3f432ff3"><con:settings/><con:config service="http://s-amadeus-ate-sync.eu.cloudhub.io" resourcePath="/sync/v2/InventoryStatistics/11/11" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST_Request" id="ce491e20-e0a6-40d5-a6fc-46ab2a3692e1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Ama-Sequence-ID" value="21"/>
+  <con:entry key="Ama-Correlation-ID" value="${DataSource#Ama-Request-Id}"/>
+  <con:entry key="Ama-Request-ID" value="Test1"/>
+  <con:entry key="Ama-Api-Version" value="1.0"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://tst-crs-esb-prx-m4.eu.cloudhub.io</con:endpoint><con:request>{
+	"generationTime": "${DataSource#generationTime}",
+  "inventoryStatistics": {
+    "chainCode": "${DataSource#chainCode}",
+    "propertyCode": "${DataSource#propertyCode}",
+    "action": "${DataSource#action}",
+    "isRms": ${DataSource#isRms},
+    "inventoryPeriods": [
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+          "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+            "code": "${DataSource#inventoryTypes[].code}",
+            "pacCode": "${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+            "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+            "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+            "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+             "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          },
+          {
+            "code": "${DataSource#priceGrids[].code1}",
+            "bookingCounter": ${DataSource#priceGrids[].bookingCounter1},
+             "bookingLimit": ${DataSource#priceGrids[].bookingLimit}
+          }
+        ],
+        "groups": [
+          {
+            "code": "${DataSource#groups[].code}",
+           "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+           "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      },
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+         "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+           "code": "${DataSource#inventoryTypes[].code}",
+          "pacCode":"${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+          "authorizedCountCounter": ${DataSource#inventoryTypes[].authorizedCountCounter},
+           "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+          "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+         "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+        "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+      "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+           "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          }
+   "generationTime": "${DataSource#generationTime}",     ],
+        "groups": [
+          {
+             "code": "${DataSource#groups[].code}",
+            "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      }
+    ]
+  }
+}</con:request><con:originalUri>http://amd-ate-esb-app.eu.cloudhub.io/api/v1/InventoryStatistics/ABC/MYPRO</con:originalUri><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="POST_Request1" id="c39206f2-519e-4b2a-aad1-d6578d1e3e26" disabled="true"><con:settings/><con:config service="http://s-amadeus-ate-sync.eu.cloudhub.io" resourcePath="/sync/v2/InventoryStatistics/11/11" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST_Request1" id="e8fa67bf-baeb-4e0b-9a4a-e7a1d8d9bf26" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Ama-Sequence-ID" value="123"/>
+  <con:entry key="Ama-Correlation-ID" value="Test123"/>
+  <con:entry key="Ama-Request-ID" value="Test12350"/>
+  <con:entry key="Ama-Api-Version" value="1.0"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://dev-crs-esb-prx.eu.cloudhub.io/</con:endpoint><con:request>{
+	"generationTime": "${DataSource#generationTime}",
+  "inventoryStatistics": {
+    "chainCode": "${DataSource#chainCode}",
+    "propertyCode": "${DataSource#propertyCode}",
+    "action": "${DataSource#action}",
+    "isRms": ${DataSource#isRms},
+    "inventoryPeriods": [
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+          "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+            "code": "${DataSource#inventoryTypes[].code}",
+            "pacCode": "${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+            "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+            "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+            "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+             "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          },
+          {
+            "code": "${DataSource#priceGrids[].code1}",
+            "bookingCounter": ${DataSource#priceGrids[].bookingCounter1},
+             "bookingLimit": ${DataSource#priceGrids[].bookingLimit}
+          }
+        ],
+        "groups": [
+          {
+            "code": "${DataSource#groups[].code}",
+           "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+           "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      },
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+         "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+           "code": "${DataSource#inventoryTypes[].code}",
+          "pacCode":"${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+          "authorizedCountCounter": ${DataSource#inventoryTypes[].authorizedCountCounter},
+           "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+          "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+         "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+        "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+      "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+           "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          }
+   "generationTime": "${DataSource#generationTime}",     ],
+        "groups": [
+          {
+             "code": "${DataSource#groups[].code}",
+            "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      }
+    ]
+  }
+}</con:request><con:originalUri>http://s-amadeus-ate-sync.eu.cloudhub.io/api/v1/InventoryStatistics/AB1/MYPRO</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="5ddb6d2b-9835-4380-a036-b230d0323d89"><con:settings/><con:config><script>def response = context.expand( '${POST_Request#Response}' )
+if(response.contains('error'))
+{
+return "PASS"
+}
+else
+{
+return "FAIL"
+}
+
+
+//def response = context.expand( '${Suite_DELETE#RawResponse}' )
+//if(response.contains('204'))
+//{
+////response.contains('OB')
+//return "PASS"
+//}
+//else
+//{
+//return "FAIL"
+//}</script></con:config></con:testStep><con:testStep type="delay" name="Delay" id="4ba2f794-890a-4f25-a9d4-bf1f21c01b4c"><con:settings/><con:config><delay>2000</delay></con:config></con:testStep><con:testStep type="restrequest" name="Azure Request" id="e6dae38e-a3ff-4ac3-a292-aa56c7ef20a1"><con:settings/><con:config service="REST Service 1" resourcePath="/azure/api/entity" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Azure Request" id="712ba37c-bf8b-431d-8dea-13b894abece3" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Authorization" value="Basic dGVzdDp0ZXN0MTIz"/>
+  <con:entry key="partitionkey" value="${DataSource#Ama-Request-Id}"/>
+  <con:entry key="Username" value="test"/>
+  <con:entry key="tablename" value="auditAmadeusTST"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Password" value="test123"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://s-azure-api-lt.eu.cloudhub.io</con:endpoint><con:request/><con:originalUri>http://test-s-azure-api.eu.cloudhub.io/azure/api/entity</con:originalUri><con:credentials><con:username>test</con:username><con:password>test123</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Responsetime" id="b2e1356e-6491-494e-8787-707dec75dddb"><con:settings/><con:config><script>return "Time taken:-" + testRunner.testCase.testSteps["POST_Request"].testRequest.response.timeTaken</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="d8f1e0f9-4127-4a97-b7f9-9d5f6d1be20c"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>logtype</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Azure Request</con:sourceStep><con:sourcePath>.properties.log_type</con:sourcePath><con:targetType>logtype</con:targetType><con:targetStep>#Project#</con:targetStep><con:targetPath/><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>message_receive_time</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Azure Request</con:sourceStep><con:sourcePath>.properties.message_receive_time</con:sourcePath><con:targetType>message_receive_time</con:targetType><con:targetStep>#Project#</con:targetStep><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="datasink" name="DataSink" id="21525db5-c62a-4b07-9e5d-9a8bc2576999"><con:settings/><con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSink type="Excel"><con:configuration><file>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</file><outfile>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</outfile><worksheet>InvalidData</worksheet><cell>C7</cell><evaluateFormulas>false</evaluateFormulas><append>false</append></con:configuration></con:dataSink><con:properties><con:property><con:name>generationTime</con:name><con:value>${DataSource#generationTime}</con:value></con:property><con:property><con:name>chainCode</con:name><con:value>${DataSource#chainCode}</con:value></con:property><con:property><con:name>propertyCode</con:name><con:value>${DataSource#propertyCode}</con:value></con:property><con:property><con:name>action</con:name><con:value>${DataSource#action}</con:value></con:property><con:property><con:name>isRms</con:name><con:value>${DataSource#isRms}</con:value></con:property><con:property><con:name> inventoryDate</con:name><con:value>${DataSource#inventoryDate}</con:value></con:property><con:property><con:name> totalInventory.actualCountCounter</con:name><con:value>${DataSource#totalInventory.actualCountCounter}</con:value></con:property><con:property><con:name> totalInventory.authorizedCountCounter</con:name><con:value>${DataSource#totalInventory.authorizedCountCounter}</con:value></con:property><con:property><con:name> totalInventory.ginvBookingCounter</con:name><con:value>${DataSource#totalInventory.ginvBookingCounter}</con:value></con:property><con:property><con:name> totalInventory.allocatedInventoryTypesCounter</con:name><con:value>${DataSource#totalInventory.allocatedInventoryTypesCounter}</con:value></con:property><con:property><con:name> totalInventory.deductedInventoryTypesCounter</con:name><con:value>${DataSource#totalInventory.deductedInventoryTypesCounter}</con:value></con:property><con:property><con:name> totalInventory.groupBookingCounter</con:name><con:value>${DataSource#totalInventory.groupBookingCounter}</con:value></con:property><con:property><con:name> totalInventory.overbookingCounter</con:name><con:value>${DataSource#totalInventory.overbookingCounter}</con:value></con:property><con:property><con:name> totalInventory.houseLosCounter</con:name><con:value>${DataSource#totalInventory.houseLosCounter}</con:value></con:property><con:property><con:name> totalInventory.bookingCounter</con:name><con:value>${DataSource#totalInventory.bookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].code</con:name><con:value>${DataSource#inventoryTypes[].code}</con:value></con:property><con:property><con:name> inventoryTypes[].pacCode</con:name><con:value>${DataSource#inventoryTypes[].pacCode}</con:value></con:property><con:property><con:name> inventoryTypes[].actualCountCounter</con:name><con:value>${DataSource#inventoryTypes[].actualCountCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].ginvBookingCounter</con:name><con:value>${DataSource#inventoryTypes[].ginvBookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].allocatedInventoryTypesCounter</con:name><con:value>${DataSource#inventoryTypes[].allocatedInventoryTypesCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].deductedInventoryTypesCounter</con:name><con:value>${DataSource#inventoryTypes[].deductedInventoryTypesCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].bookingCounter</con:name><con:value>${DataSource#inventoryTypes[].bookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].groupBookingCounter</con:name><con:value>${DataSource#inventoryTypes[].groupBookingCounter}</con:value></con:property><con:property><con:name> inventoryTypes[].authorizedCountCounter</con:name><con:value>${DataSource#inventoryTypes[].authorizedCountCounter}</con:value></con:property><con:property><con:name> priceGrids[].code</con:name><con:value>${DataSource#priceGrids[].code}</con:value></con:property><con:property><con:name> priceGrids[].bookingCounter</con:name><con:value>${DataSource#priceGrids[].bookingCounter}</con:value></con:property><con:property><con:name>priceGrids[].code1</con:name><con:value>${DataSource#priceGrids[].code1}</con:value></con:property><con:property><con:name>priceGrids[].bookingCounter1</con:name><con:value>${DataSource#priceGrids[].bookingCounter1}</con:value></con:property><con:property><con:name> priceGrids[].bookingLimit</con:name><con:value>${DataSource#priceGrids[].bookingLimit}</con:value></con:property><con:property><con:name> groups[].code</con:name><con:value>${DataSource#groups[].code}</con:value></con:property><con:property><con:name> groups[].allocatedInventoryTypesCounter</con:name><con:value>${DataSource#groups[].allocatedInventoryTypesCounter}</con:value></con:property><con:property><con:name> groups[].deductedInventoryTypesCounter</con:name><con:value>${DataSource#groups[].deductedInventoryTypesCounter}</con:value></con:property><con:property><con:name> groups[].bookingCounter</con:name><con:value>${DataSource#groups[].bookingCounter}</con:value></con:property><con:property><con:name>Ama-Request-Id</con:name><con:value>${DataSource#Ama-Request-Id}</con:value></con:property><con:property><con:name>Result</con:name><con:value>${Groovy Script#result}</con:value></con:property><con:property><con:name>Request</con:name><con:value>${POST_Request#Request}</con:value></con:property><con:property><con:name>Response</con:name><con:value>${POST_Request#Response}</con:value></con:property><con:property><con:name>Audit Response</con:name><con:value>${Azure Request#Response}</con:value></con:property><con:property><con:name>Audit entries</con:name><con:value>${#Project#logtype}</con:value></con:property><con:property><con:name>Response time</con:name><con:value>${Responsetime#result}</con:value></con:property><con:property><con:name>message_receive_time</con:name><con:value>${#Project#message_receive_time}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="datasourceloop" name="DataSource Loop" id="75d33d11-8c00-4b50-998d-3891dadc0492"><con:settings/><con:config><dataSourceStep>DataSource</dataSourceStep><targetStep>POST_Request</targetStep></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>f1a4188c-48ab-402e-8ea1-38b4ad88d7b0</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>59289fc0-fd9d-4c30-8758-a2a26682c302</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>8c626506-3dd7-4f61-9c47-7ebb8d05a37d</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>92e4123f-b5e2-44ff-876f-4208443b7c67</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>af08c183-46eb-452c-a518-ba753ec8ceae</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>115d2dc5-616c-49cb-8687-e04789079690</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>e6dae38e-a3ff-4ac3-a292-aa56c7ef20a1</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>b2e1356e-6491-494e-8787-707dec75dddb</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>d8f1e0f9-4127-4a97-b7f9-9d5f6d1be20c</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="92ee3ea2-22d8-4910-906b-50362b393498" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Missing_Attributes" searchProperties="true" timeout="0" maxResults="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="properties" name="Properties" id="af40cfef-34c2-4f83-b257-33d5aea8d34e"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Excel_Path</con:name><con:value>D:/Amadeus/Test Suits/InventoryPush.xlsx</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="datasource" name="DataSource" id="e0984c9d-7e49-464b-a720-f8993962022a"><con:settings/><con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSource type="Excel"><con:configuration><file>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</file><worksheet>Missing_Attributes</worksheet><cell>C7</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration></con:dataSource><con:shared>true</con:shared><con:restartShared>true</con:restartShared><con:property>InputRequest</con:property><con:property>Ama-Request-Id</con:property><con:property>Result</con:property><con:property>ProvidedRequest</con:property><con:property>Response</con:property><con:property>Audit Response</con:property><con:property>Audit entries</con:property><con:property>Response time</con:property><con:property>message_receive_time</con:property><con:completeLastOperation>true</con:completeLastOperation><con:restartOnRun>true</con:restartOnRun></con:config></con:testStep><con:testStep type="restrequest" name="POST_Request" id="f18c0aeb-4d8f-4dca-afca-fcd885e5a72c"><con:settings/><con:config service="http://s-amadeus-ate-sync.eu.cloudhub.io" resourcePath="/sync/v2/InventoryStatistics/11/11" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST_Request" id="ce491e20-e0a6-40d5-a6fc-46ab2a3692e1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Ama-Sequence-ID" value="21"/>
+  <con:entry key="Ama-Correlation-ID" value="${DataSource#Ama-Request-Id}"/>
+  <con:entry key="Ama-Request-ID" value="Test1"/>
+  <con:entry key="Ama-Api-Version" value="1.0"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://tst-crs-esb-prx.eu.cloudhub.io</con:endpoint><con:request>${DataSource#InputRequest}</con:request><con:originalUri>http://amd-ate-esb-app.eu.cloudhub.io/api/v1/InventoryStatistics/ABC/MYPRO</con:originalUri><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="POST_Request1" id="6d9496a3-224c-4c25-9bea-d9ce71d58cb8" disabled="true"><con:settings/><con:config service="http://s-amadeus-ate-sync.eu.cloudhub.io" resourcePath="/sync/v2/InventoryStatistics/11/11" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST_Request1" id="e8fa67bf-baeb-4e0b-9a4a-e7a1d8d9bf26" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Ama-Sequence-ID" value="123"/>
+  <con:entry key="Ama-Correlation-ID" value="Test123"/>
+  <con:entry key="Ama-Request-ID" value="Test12350"/>
+  <con:entry key="Ama-Api-Version" value="1.0"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://dev-crs-esb-prx.eu.cloudhub.io/</con:endpoint><con:request>{
+	"generationTime": "${DataSource#generationTime}",
+  "inventoryStatistics": {
+    "chainCode": "${DataSource#chainCode}",
+    "propertyCode": "${DataSource#propertyCode}",
+    "action": "${DataSource#action}",
+    "isRms": ${DataSource#isRms},
+    "inventoryPeriods": [
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+          "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+            "code": "${DataSource#inventoryTypes[].code}",
+            "pacCode": "${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+            "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+            "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+            "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+             "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          },
+          {
+            "code": "${DataSource#priceGrids[].code1}",
+            "bookingCounter": ${DataSource#priceGrids[].bookingCounter1},
+             "bookingLimit": ${DataSource#priceGrids[].bookingLimit}
+          }
+        ],
+        "groups": [
+          {
+            "code": "${DataSource#groups[].code}",
+           "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+           "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      },
+      {
+        "inventoryDate": "${DataSource#inventoryDate}",
+        "totalInventory": {
+         "actualCountCounter": ${DataSource#totalInventory.actualCountCounter},
+          "ginvBookingCounter": ${DataSource#totalInventory.ginvBookingCounter},
+          "allocatedInventoryTypesCounter":${DataSource#totalInventory.allocatedInventoryTypesCounter},
+          "deductedInventoryTypesCounter": ${DataSource#totalInventory.deductedInventoryTypesCounter},
+          "groupBookingCounter": ${DataSource#totalInventory.groupBookingCounter},
+          "overbookingCounter": ${DataSource#totalInventory.overbookingCounter},
+          "bookingCounter": ${DataSource#totalInventory.bookingCounter}
+        },
+        "inventoryTypes": [
+          {
+           "code": "${DataSource#inventoryTypes[].code}",
+          "pacCode":"${DataSource#inventoryTypes[].pacCode}",
+            "actualCountCounter": ${DataSource#inventoryTypes[].actualCountCounter},
+          "authorizedCountCounter": ${DataSource#inventoryTypes[].authorizedCountCounter},
+           "ginvBookingCounter": ${DataSource#inventoryTypes[].ginvBookingCounter},
+          "allocatedInventoryTypesCounter": ${DataSource#inventoryTypes[].allocatedInventoryTypesCounter},
+         "deductedInventoryTypesCounter": ${DataSource#inventoryTypes[].deductedInventoryTypesCounter},
+        "bookingCounter": ${DataSource#inventoryTypes[].bookingCounter},
+      "groupBookingCounter": ${DataSource#inventoryTypes[].groupBookingCounter}
+          }
+        ],
+        "priceGrids": [
+          {
+            "code": "${DataSource#priceGrids[].code}",
+           "bookingCounter": ${DataSource#priceGrids[].bookingCounter}
+          }
+   "generationTime": "${DataSource#generationTime}",     ],
+        "groups": [
+          {
+             "code": "${DataSource#groups[].code}",
+            "allocatedInventoryTypesCounter": ${DataSource#groups[].allocatedInventoryTypesCounter},
+            "deductedInventoryTypesCounter": ${DataSource#groups[].deductedInventoryTypesCounter},
+            "bookingCounter": ${DataSource#groups[].bookingCounter}
+          }
+        ]
+      }
+    ]
+  }
+}</con:request><con:originalUri>http://s-amadeus-ate-sync.eu.cloudhub.io/api/v1/InventoryStatistics/AB1/MYPRO</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="6540c599-ea67-4a9d-855c-797bfaad927c"><con:settings/><con:config><script>def response = context.expand( '${POST_Request#Response}' )
+if(response.contains('error'))
+{
+return "PASS"
+}
+else
+{
+return "FAIL"
+}
+
+
+//def response = context.expand( '${Suite_DELETE#RawResponse}' )
+//if(response.contains('204'))
+//{
+////response.contains('OB')
+//return "PASS"
+//}
+//else
+//{
+//return "FAIL"
+//}</script></con:config></con:testStep><con:testStep type="delay" name="Delay" id="ed72f14e-dd03-43f2-b6b5-4ccfe8ff698a"><con:settings/><con:config><delay>2000</delay></con:config></con:testStep><con:testStep type="restrequest" name="Azure Request" id="4b5043a9-ee89-4199-8956-c1013b344e0d"><con:settings/><con:config service="REST Service 1" resourcePath="/azure/api/entity" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Azure Request" id="712ba37c-bf8b-431d-8dea-13b894abece3" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Authorization" value="Basic dGVzdDp0ZXN0MTIz"/>
+  <con:entry key="partitionkey" value="${DataSource#Ama-Request-Id}"/>
+  <con:entry key="Username" value="test"/>
+  <con:entry key="tablename" value="auditAmadeusTST"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Password" value="test123"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://s-azure-api-lt.eu.cloudhub.io</con:endpoint><con:request/><con:originalUri>http://test-s-azure-api.eu.cloudhub.io/azure/api/entity</con:originalUri><con:credentials><con:username>test</con:username><con:password>test123</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Responsetime" id="20e346cc-f188-4387-b69c-500555fac450"><con:settings/><con:config><script>return "Time taken:-" + testRunner.testCase.testSteps["POST_Request"].testRequest.response.timeTaken</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="6d618b29-a8ee-42f5-a63e-5110d5b440ed"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>logtype</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Azure Request</con:sourceStep><con:sourcePath>.properties.log_type</con:sourcePath><con:targetType>logtype</con:targetType><con:targetStep>#Project#</con:targetStep><con:targetPath/><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>message_receive_time</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Azure Request</con:sourceStep><con:sourcePath>.properties.message_receive_time</con:sourcePath><con:targetType>message_receive_time</con:targetType><con:targetStep>#Project#</con:targetStep><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="datasink" name="DataSink" id="63429550-ccd2-4f8d-a5a2-421f4b124e8d"><con:settings/><con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSink type="Excel"><con:configuration><file>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</file><outfile>D:/Amadeus/Test Suits/InventoryPush/InventoryPush.xlsx</outfile><worksheet>Missing_Attributes</worksheet><cell>C7</cell><evaluateFormulas>false</evaluateFormulas><append>false</append></con:configuration></con:dataSink><con:properties><con:property><con:name>InputRequest</con:name><con:value>${DataSource#InputRequest}</con:value></con:property><con:property><con:name>Ama-Request-Id</con:name><con:value>${DataSource#Ama-Request-Id}</con:value></con:property><con:property><con:name>Result</con:name><con:value>${Groovy Script#result}</con:value></con:property><con:property><con:name>ProvidedRequest</con:name><con:value>${POST_Request#Request}</con:value></con:property><con:property><con:name>Response</con:name><con:value>${POST_Request#Response}</con:value></con:property><con:property><con:name>Audit Response</con:name><con:value>${Azure Request#Response}</con:value></con:property><con:property><con:name>Audit entries</con:name><con:value>${#Project#logtype}</con:value></con:property><con:property><con:name>Response time</con:name><con:value>${Responsetime#result}</con:value></con:property><con:property><con:name>message_receive_time</con:name><con:value>${#Project#message_receive_time}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="datasourceloop" name="DataSource Loop" id="fef0ab3b-99ce-4b8c-bbfe-d1ae0ce37bb4"><con:settings/><con:config><dataSourceStep>DataSource</dataSourceStep><targetStep>POST_Request</targetStep></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>f1a4188c-48ab-402e-8ea1-38b4ad88d7b0</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>59289fc0-fd9d-4c30-8758-a2a26682c302</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>8c626506-3dd7-4f61-9c47-7ebb8d05a37d</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>92e4123f-b5e2-44ff-876f-4208443b7c67</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>af08c183-46eb-452c-a518-ba753ec8ceae</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>115d2dc5-616c-49cb-8687-e04789079690</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>e6dae38e-a3ff-4ac3-a292-aa56c7ef20a1</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>b2e1356e-6491-494e-8787-707dec75dddb</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>d86a1c93-a555-4819-b90b-c4e7c2f11ace</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>6d618b29-a8ee-42f5-a63e-5110d5b440ed</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties><con:property><con:name>res</con:name><con:value>{
+  "transactionStatus": "success",
+  "warning": [
+    {
+      "code": "Success",
+      "text": "Success"
+    }
+  ]
+}</con:value></con:property></con:properties><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="OVERRIDE">http://123</con:endpoint></con:endpointStrategy><con:requirements/><con:properties><con:property><con:name>logtype</con:name><con:value>[ENTRY, ERROR]</con:value></con:property><con:property><con:name>message_receive_time</con:name><con:value>[2018-06-19T10:46:55.106Z, 2018-06-19T10:46:55.122Z]</con:value></con:property></con:properties><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:authRepository/><con:loadUiTest name="Mo" id="61874001-270b-4bd6-90a5-73d91ffb9d0c"><con:settings><con:setting id="soapUIObjectSourceId">25e05d9c-6ed7-44c7-94cb-557905921be2</con:setting><con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_TestCase</con:setting></con:settings><con1:loadui-project id="0eff0820-692e-4d17-a7cd-a532588373b3" label="Mo" xmlns:con1="http://eviware.com/loadui/config"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="ModelItem.saveReport" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/><con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/><con1:property propagates="true" key="Temporary project" type="java.lang.String"/><con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">PerScenario</con1:property><con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/></con1:properties><con1:attributes/><con1:addons/><con1:scene label="New Scenario" id="ba8fa7ca-2de7-4b24-a279-e26a3dc95826" version="7"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property><con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property></con1:properties><con1:attributes/><con1:addons/><con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="f6fc39bd-c4ed-4543-9983-0b67d580b11f" category="Scheduler"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property><con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property><con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property><con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property><con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">true</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property></con1:attributes><con1:addons/></con1:component><con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 1" id="f29edd1b-c595-41bb-b065-f83ee45c632a" category="Generators"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="limitVU" type="java.lang.Long">10</con1:property><con1:property propagates="true" key="load" type="java.lang.Long">5</con1:property><con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Fixed Load</con1:property></con1:attributes><con1:addons/></con1:component><con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="TestSuite:BMO" id="c0fce654-67c4-4800-a269-9fb9ea3cf4f9" category="Runners"><con1:properties><con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/><con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property><con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property><con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property><con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/><con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property><con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">25e05d9c-6ed7-44c7-94cb-557905921be2</con1:property><con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property><con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property><con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property><con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property></con1:properties><con1:attributes><con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property></con1:attributes><con1:addons/></con1:component><con1:connection outputTerminalId="f6fc39bd-c4ed-4543-9983-0b67d580b11f/outgoingTerminal" inputTerminalId="f29edd1b-c595-41bb-b065-f83ee45c632a/stateTerminal"/><con1:connection outputTerminalId="f29edd1b-c595-41bb-b065-f83ee45c632a/triggerTerminal" inputTerminalId="c0fce654-67c4-4800-a269-9fb9ea3cf4f9/triggerTerminal"/><con1:connection outputTerminalId="c0fce654-67c4-4800-a269-9fb9ea3cf4f9/runningTerminal" inputTerminalId="f29edd1b-c595-41bb-b065-f83ee45c632a/Sample Count"/></con1:scene><con1:statistics><con1:page title="DefaultLoadUIStatisticPage"><con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="" groupType="Monitors"><con1:attributes><con1:property key="GroupId">7ab669e3-a5d7-45e7-8538-afe2bd513da7</con1:property></con1:attributes></con1:chartGroup></con1:page></con1:statistics></con1:loadui-project><con:loadUITestScenario projectId="0eff0820-692e-4d17-a7cd-a532588373b3" scenarioId="ba8fa7ca-2de7-4b24-a279-e26a3dc95826" name="New Scenario" id="0c1baaf0-6750-4543-b41e-e1fecf5f1613"><con:settings/></con:loadUITestScenario><con:loadUIPanelData id="185ff265-31d2-492d-a012-0e51f588b408"><con:panel>Log</con:panel><con:data><con:paramName>column_width@Timestamp</con:paramName><con:paramValue>84</con:paramValue></con:data><con:data><con:paramName>column_visible@Timestamp</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@ID</con:paramName><con:paramValue>57</con:paramValue></con:data><con:data><con:paramName>column_visible@ID</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@Status</con:paramName><con:paramValue>57</con:paramValue></con:data><con:data><con:paramName>column_visible@Status</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@TriggerTimestamp</con:paramName><con:paramValue>84</con:paramValue></con:data><con:data><con:paramName>column_visible@TriggerTimestamp</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@TimeTaken</con:paramName><con:paramValue>115</con:paramValue></con:data><con:data><con:paramName>column_visible@TimeTaken</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@_wait_time_</con:paramName><con:paramValue>106</con:paramValue></con:data><con:data><con:paramName>column_visible@_wait_time_</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@Bytes</con:paramName><con:paramValue>52</con:paramValue></con:data><con:data><con:paramName>column_visible@Bytes</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@HTTP Status</con:paramName><con:paramValue>90</con:paramValue></con:data><con:data><con:paramName>column_visible@HTTP Status</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@CurrentlyRunning</con:paramName><con:paramValue>75</con:paramValue></con:data><con:data><con:paramName>column_visible@CurrentlyRunning</con:paramName><con:paramValue>true</con:paramValue></con:data><con:data><con:paramName>column_width@Request</con:paramName><con:paramValue>67</con:paramValue></con:data><con:data><con:paramName>column_visible@Request</con:paramName><con:paramValue>false</con:paramValue></con:data><con:data><con:paramName>column_width@Response</con:paramName><con:paramValue>77</con:paramValue></con:data><con:data><con:paramName>column_visible@Response</con:paramName><con:paramValue>false</con:paramValue></con:data><con:data><con:paramName>column_width@soapui_context</con:paramName><con:paramValue>107</con:paramValue></con:data><con:data><con:paramName>column_visible@soapui_context</con:paramName><con:paramValue>false</con:paramValue></con:data></con:loadUIPanelData><con:reportParameters/></con:loadUiTest><con:tags/></con:soapui-project>
